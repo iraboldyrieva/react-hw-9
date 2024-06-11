@@ -1,0 +1,9 @@
+.select {
+    border: 2px solid lightcoral;
+    border-radius: 4px;
+    background-color: transparent;
+    margin: 20px;
+    appearance: none;
+    /* Видаляє внутрішній стиль браузера */
+    -webkit-appearance: none;
+}

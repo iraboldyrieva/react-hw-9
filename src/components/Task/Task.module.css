@@ -1,0 +1,16 @@
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.deleteBtn {
+    background-color: transparent;
+    border: none;
+    color: crimson;
+    font-family: 'Gill Sans', sans-serif;
+}

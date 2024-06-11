@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+  max-width: 300px;
+  height: 100%;
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+.content {
+  padding: 30px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 20px 20px 20px;
+}
+
+.listContainer {
+  display: flex;
+  width: 100%;
+}
+
+.addBtn {
+  width: 100%;
+  font-family: "Gill Sans", sans-serif;
+  color: darkslategrey;
+  font-size: 14pt;
+  background-color: lightcoral;
+  border-radius: 20px;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: crimson;
+  font-size: 10pt;
+}
+
+.clearBtn {
+  font-family: "Gill Sans", sans-serif;
+  color: darkslategrey;
+  font-size: 14pt;
+  background-color: lightcoral;
+  border-radius: 20px;
+  border: none;
+  margin: 20px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.search {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.searchContent {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
