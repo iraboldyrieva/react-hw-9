@@ -2,6 +2,7 @@
   "name": "todo-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://iraboldyrieva.github.io/react-hw-9",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -41,5 +42,4 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "proxy": "https://66670e5da2f8516ff7a61ddb.mockapi.io"
-  
 }
