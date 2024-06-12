@@ -16,6 +16,7 @@ const ToDoList = ({
   const [filter, setFilter] = useState("All");
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
+  const [editingTask, setEditingTask] = useState(null);
 
   const handleAddTask = () => {
     if (newTaskName.length < 3) {
@@ -60,6 +61,27 @@ const ToDoList = ({
     return filteredTasks;
   };
 
+  const handleEditTask = (task) => {
+    setEditingTask(task);
+    setNewTaskName(task.title);
+    setNewTaskDescription(task.description);
+    setNewTaskDone(task.checked);
+  };
+
+  const handleUpdateTask = () => {
+    const updatedTask = {
+      ...editingTask,
+      title: newTaskName,
+      description: newTaskDescription,
+      checked: newTaskDone,
+    };
+    updateTodo(editingTask.id, updatedTask);
+    setEditingTask(null);
+    setNewTaskName("");
+    setNewTaskDescription("");
+    setNewTaskDone(false);
+  };
+
   const filteredTask = filterTasks();
 
   return (
@@ -84,9 +106,11 @@ const ToDoList = ({
             setError("");
           }}
         />
-
-        <button className={styles.addBtn} onClick={handleAddTask}>
-          Додати
+        <button
+          className={styles.addBtn}
+          onClick={editingTask ? handleUpdateTask : handleAddTask}
+        >
+          {editingTask ? "Update" : "Add"}
         </button>
 
         <div className={styles.error}>{error}</div>
@@ -123,6 +147,7 @@ const ToDoList = ({
                 })
               }
               onDelete={deleteTodo}
+              onEdit={() => handleEditTask(task)}
             />
           ))}
         </ul>
